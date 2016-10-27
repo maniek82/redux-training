@@ -7,10 +7,10 @@ var Navigation = () => {
       <div className="top-bar-left">
         <ul className="menu">
           <li className="menu-text">
-            React Boilerplate Final
+            Redux Training
           </li>
           <li>
-            <IndexLink to="/" activeClassName="active-link">Example</IndexLink>
+            <IndexLink to="/" activeClassName="active-link">Examples</IndexLink>
           </li>
           
         </ul>
