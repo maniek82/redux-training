@@ -25,6 +25,7 @@ var reducer = (state = stateDefault, action) => {
 var store = redux.createStore(reducer, 
 	window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f=>f
 	);
+
 store.subscribe(() => {
 	var state = store.getState()
 
