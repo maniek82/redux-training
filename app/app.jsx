@@ -11,14 +11,14 @@ $(document).foundation();
 // App css
 require('style!css!sass!applicationStyles')
 
-ReactDOM.render(
-  <Router history={hashHistory}>
-    <Route path="/" component={Main}>
+// ReactDOM.render(
+//   <Router history={hashHistory}>
+//     <Route path="/" component={Main}>
 
-    </Route>
-  </Router>,
-  document.getElementById('app')
-);
+//     </Route>
+//   </Router>,
+//   document.getElementById('app')
+// );
 
 // require('./redux-example.jsx');
 require('./redux-todo-example.jsx');

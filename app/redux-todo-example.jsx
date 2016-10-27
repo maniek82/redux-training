@@ -22,8 +22,14 @@ var reducer = (state = stateDefault, action) => {
 
 };
 
-var store = redux.createStore(reducer);
+var store = redux.createStore(reducer, 
+	window.__REDUX_DEVTOOLS_EXTENSION__ ? window.__REDUX_DEVTOOLS_EXTENSION__() : f=>f
+	);
+store.subscribe(() => {
+	var state = store.getState()
 
+	document.getElementById('app').innerHTML = state.searchText;
+});
 console.log('Current state ', store.getState());
 
 
@@ -31,4 +37,11 @@ store.dispatch ({
 	type: 'CHANGE_SEARCH_TEXT',
 	searchText: 'work'
 });
-console.log('search text should be work ', store.getState());
+store.dispatch ({
+	type: 'CHANGE_SEARCH_TEXT',
+	searchText: 'dog'
+});
+store.dispatch ({
+	type: 'CHANGE_SEARCH_TEXT',
+	searchText: 'something else'
+});
